@@ -1,0 +1,49 @@
+Lab 3 Preparation
+
+Zeqi Li		1000326060
+Yaoming Yin	1000757308
+
+Q1.1: General-purpose Callee-saved registers: r16-r23
+      Frame pointer: r28 (When it is not used, it is availible for
+callee-saved register)
+
+Q1.2: r2, r3, r8-r15
+
+Q1.3: sp: The stack pointer points to the last used slot, it is used to
+allocate memory and trace the saved value of register on the stack.
+
+Q1.4: The stack pointer points to the last used slot
+
+Q1.5 ra register should be saved in caller function before call any function. It is used to save the
+address of the calling instruction + 4
+
+Q1.6: r4-r7
+
+Q1.7: r2-r3
+
+Q1.8: Saving r4 and r7 on stack can make these registers availible for general
+use, which gives more freedom and less restriction for the program, which
+simplified the algorithm. Also, when the function wants to call another
+function, it does not need to worry about losing previous argument passed in.
+
+Q2:	r4: the address of the string "OOOHHHDDD"
+   	r5: argument 8
+    	r6: argument 9
+   	r7: argument 10
+   	ra: the address of the instruction "printn" + 4 (after call
+instruction) in this case
+	
+	0(sp): 11
+	4(sp): 12
+	8(sp): 13
+	12(sp): 14
+	16(sp): 15
+	20(sp): 16
+	24(sp): ra
+	Frame pointer points to the address after ra
+
+Q3: On sepearate files
+	
+	
+
+	
