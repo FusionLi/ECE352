@@ -22,7 +22,8 @@ Q1.6: r4-r7
 Q1.7: r2-r3
 
 Q1.8: Save r4 and r7 on stack so I can just find all arguments from the stack,
-which means I do not need to worry about the register stored in r4-r7
+which means I do not need to worry about the arguments stored in r4-r7
+seperately.
 
 Q2:	r4: the address of the string "OOOHHHDDD" (0x2000)
    	r5: argument 8
