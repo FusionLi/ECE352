@@ -18,12 +18,14 @@ movi r14, H
 movi r15, D
 // r8 is temp variable for current number to be printed
 INITIAL:
+mov r9, sp
 // first three arguments saved in register r3-r7
 ldw r8, 0(r4)
 mov r10, r5
 // save everything on temp variable
 mov r11, ra
 mov r12, r4
+beq r8, r0 END
 call JUDGE
 // restore back
 mov ra, r11
@@ -34,6 +36,7 @@ mov r10, r6
 // save everything on temp variable
 mov r11, ra
 mov r12, r4
+beq r8, r0 END
 call JUDGE
 // restore back
 mov ra, r11
@@ -44,10 +47,12 @@ mov r10, r7
 // save everything on temp variable
 mov r11, ra
 mov r12, r4
+beq r8, r0 END
 call JUDGE
 // restore back
 mov ra, r11
 mov r4, r12
+beq r8, r0 END
 addi r4, r4, 1
 // processing the arguments after r7
 LOOP:
@@ -58,6 +63,7 @@ mov r12, r4
 call JUDGE
 mov ra, r11
 mov r4, r12
+beq r8, r0 END
 addi r4,r4,1
 addi sp,sp,4
 
@@ -65,7 +71,6 @@ JUDGE:
 beq r8 r13, OCT
 beq r8, r14, HEX
 beq r8, r15, DEC
-beq r8, r0 ,END
 END_JUDGE:
 ret
 
@@ -77,10 +82,11 @@ HEX:
 mov r4, r10
 call printHex
 br END_JUDGE
-OCT:
+DEC:
 mov r4, r10
 call printDec
 br END_JUDGE
 
 END:
-br END
+mov sp, r9
+ret
