@@ -1,0 +1,26 @@
+Lab 4 preparation
+
+Using GPIO JP1 0x10000060
+
+2.1 0x07f557ff, 0x10000064 (Address GPIO JPI + 4)
+
+2.2 4, 0x10000060, 0xffffffef (basically a 0 in bit 4 to enable it)
+
+2.3.a  0xffffefff, 0x10000060, off
+
+2.3.b 13, 0x10000060, 0
+
+2.3.c 31, 27, 0x10000060
+
+3.1 It counts downwards
+
+3.2 Write Periodl (timer address + 8) and Periodh (timer address + 12)
+
+3.3 Check bit 0 (Timeout bit in base address) to judge whether timer has timed
+out
+
+3.4 Read counter Snapshot (lower 16 bits) and counter Snaoshot (upper 16 bits)
+
+3.5 Check Run bit in base address
+
+4 Seperate fiels
