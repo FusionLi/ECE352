@@ -1,5 +1,8 @@
 Lab 4 preparation
 
+Zeqi Li		1000326060
+Yaoming Yin	1000757308
+
 Using GPIO JP1 0x10000060
 
 2.1 0x07f557ff, 0x10000064 (Address GPIO JPI + 4)
