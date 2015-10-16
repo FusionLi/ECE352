@@ -1,0 +1,15 @@
+Lab 5 preparation
+
+Zeqi Li		1000326060
+Yaoming Yin	1000757308
+
+2.1 0x00 means the car is completely off the track. Five sensors all indicate
+the car is off the track
+
+2.2 Require change steering angle to -100 degree
+
+2.3 First I will write first byte 0x04 (packet type) and then I can write 0x7f
+(127) for maximum forward acceleration or 0x81 (-127) for maximum backward
+acceleration
+
+3 seperate file 
