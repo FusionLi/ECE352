@@ -12,4 +12,4 @@ the car is off the track
 (127) for maximum forward acceleration or 0x81 (-127) for maximum backward
 acceleration
 
-3 seperate file 
+3 separate file 
